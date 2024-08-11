@@ -1,0 +1,123 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for the game container */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 100, 0, 0.5); /* Adjusted color for shadow */
+    padding: 20px;
+    position: relative;
+}
+
+/* Styling for the game board (canvas) */
+#game-board {
+    background-color: #000;
+    display: block;
+}
+
+/* Styling for snake segments */
+.snake-segment {
+    background-color: #00FF00;
+    border-radius: 5px; /* Rounded corners for a smoother look */
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Glow effect */
+    transform: perspective(500px) rotateX(15deg); /* 3D rotation effect */
+}
+
+/* Styling for controls */
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button, select {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Button styling */
+button {
+    background-color: #28a745;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Select box styling */
+select {
+    background-color: #fff;
+    color: #333;
+}
+
+select:focus {
+    outline: none;
+    border: 2px solid #28a745;
+}
+
+/* Styling for the score card */
+#score-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#score-card.hidden {
+    display: none;
+}
+
+#score-card.fade-in {
+    opacity: 1;
+}
+
+#score-card h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#score-card p {
+    font-size: 20px;
+}
+
+#score-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+}
+
+#score-card button:hover {
+    background-color: #218838;
+}

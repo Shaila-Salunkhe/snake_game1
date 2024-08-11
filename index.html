@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-board"></canvas>
+        <div id="controls">
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button id="start-btn">Start</button>
+        </div>
+        <div id="score-card" class="hidden">
+            <!-- Score card content will be injected here by JavaScript -->
+        </div>
+    </div>
+    <script src="snake.js"></script>
+</body>
+</html>
